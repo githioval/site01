@@ -201,16 +201,16 @@ export default function HorizontalScrollSection() {
                   style={{ objectPosition: card.objectPosition }}
                   draggable={false}
                 />
-                <div className="absolute inset-0 bg-background/30" />
+                <div className="absolute inset-0 bg-background/30 transition-opacity duration-500 group-hover:opacity-0" />
                 <div
-                  className="absolute inset-0 opacity-30"
+                  className="absolute inset-0 opacity-30 transition-opacity duration-500 group-hover:opacity-0"
                   style={{
                     backgroundImage:
                       "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
                     backgroundSize: "40px 40px",
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
               </div>
 
               {/* Text layer — fixed in card frame, never skewed */}

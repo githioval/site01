@@ -117,7 +117,7 @@ export default function ParallaxImageSection() {
             className={`parallax-block ${i % 2 === 1 ? "md:ml-auto md:w-[85%]" : "md:w-[85%]"}`}
           >
             <div
-              className="parallax-window relative h-[50vh] overflow-hidden rounded-sm md:h-[60vh]"
+              className="parallax-window group relative h-[50vh] overflow-hidden rounded-sm md:h-[60vh]"
               data-cursor="view"
             >
               <div className="parallax-skew-target absolute inset-0">
@@ -133,7 +133,7 @@ export default function ParallaxImageSection() {
                     style={{ objectPosition: block.objectPosition }}
                     draggable={false}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-0" />
                 </div>
               </div>
               <span className="absolute bottom-6 left-6 z-10 font-sans text-xs uppercase tracking-[0.25em] text-foreground/70">

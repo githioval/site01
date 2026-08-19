@@ -4,19 +4,13 @@ export type PexelsImage = {
   creditUrl: string;
 };
 
-/** Bright Pexels assets — local copies in /public/images */
+/** Pexels assets — local copies in /public/images */
 export const PEXELS_IMAGES: PexelsImage[] = [
   {
-    src: "/images/dome-geometric.jpg",
-    alt: "Intricate architectural dome with geometric patterns",
+    src: "/images/pink-waves.jpg",
+    alt: "Abstract pink waves in minimalist composition",
     creditUrl:
-      "https://www.pexels.com/photo/intricate-architectural-dome-with-geometric-patterns-37982071/",
-  },
-  {
-    src: "/images/beam-ceiling.jpg",
-    alt: "Beam under ceiling in black and white",
-    creditUrl:
-      "https://www.pexels.com/photo/beam-under-ceiling-in-black-and-white-19176619/",
+      "https://www.pexels.com/photo/abstract-pink-waves-in-minimalist-composition-31216387/",
   },
   {
     src: "/images/orange-sculpture.jpg",
@@ -25,10 +19,28 @@ export const PEXELS_IMAGES: PexelsImage[] = [
       "https://www.pexels.com/photo/abstract-orange-sculptural-form-on-gradient-background-36025195/",
   },
   {
-    src: "/images/green-fluid.jpg",
-    alt: "Abstract green fluid shape on mint background",
+    src: "/images/violet-pink-geometric.jpg",
+    alt: "Abstract violet and pink 3D geometric art",
     creditUrl:
-      "https://www.pexels.com/photo/abstract-green-fluid-shape-on-mint-background-36025194/",
+      "https://www.pexels.com/photo/abstract-violet-and-pink-3d-geometric-art-36025199/",
+  },
+  {
+    src: "/images/green-waves.jpg",
+    alt: "Abstract green wave pattern with smooth curves",
+    creditUrl:
+      "https://www.pexels.com/photo/abstract-green-wave-pattern-with-smooth-curves-31216390/",
+  },
+  {
+    src: "/images/floral-sphere.jpg",
+    alt: "Abstract 3D floral sphere on pastel background",
+    creditUrl:
+      "https://www.pexels.com/photo/abstract-3d-floral-sphere-on-pastel-background-34268916/",
+  },
+  {
+    src: "/images/orange-paper.jpg",
+    alt: "Orange paper cutouts on orange surface",
+    creditUrl:
+      "https://www.pexels.com/photo/orange-paper-cutouts-on-orange-surface-12966861/",
   },
 ];
 
@@ -45,19 +57,17 @@ function shuffleImages(images: PexelsImage[], seed: number): PexelsImage[] {
   return result;
 }
 
-/** Pick `count` images from shuffled pool — cycles when count > unique images */
 function pickImages(count: number, seed: number): PexelsImage[] {
   const result: PexelsImage[] = [];
   let round = 0;
 
   while (result.length < count) {
-    const batch = shuffleImages(PEXELS_IMAGES, seed + round * 97);
-    result.push(...batch);
+    result.push(...shuffleImages(PEXELS_IMAGES, seed + round * 97));
     round++;
   }
 
   return result.slice(0, count);
 }
 
-export const PARALLAX_IMAGES = pickImages(3, 37982071);
-export const GALLERY_IMAGES = pickImages(6, 37982071 + 500);
+export const PARALLAX_IMAGES = pickImages(3, 31216387);
+export const GALLERY_IMAGES = pickImages(6, 31216387 + 500);
