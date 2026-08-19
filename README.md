@@ -2,6 +2,10 @@
 
 Premium cinematic landing page built with Next.js, GSAP, Three.js, and Lenis smooth scroll.
 
+**Live site:** [https://githioval.github.io/site01/](https://githioval.github.io/site01/)
+
+**Repository:** [https://github.com/githioval/site01](https://github.com/githioval/site01)
+
 ## Stack
 
 - **Next.js 15** (App Router, static export)
