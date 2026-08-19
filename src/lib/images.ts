@@ -45,23 +45,19 @@ function shuffleImages(images: PexelsImage[], seed: number): PexelsImage[] {
   return result;
 }
 
-function assignSectionImages(
-  parallaxCount: number,
-  galleryCount: number,
-  seed: number
-): { parallax: PexelsImage[]; gallery: PexelsImage[] } {
-  const shuffled = shuffleImages(PEXELS_IMAGES, seed);
-  const parallax = shuffled.slice(0, parallaxCount);
-  const remainder = shuffled.slice(parallaxCount);
-  const extras = shuffleImages(PEXELS_IMAGES, seed + 99).slice(
-    0,
-    galleryCount - remainder.length
-  );
+/** Pick `count` images from shuffled pool — cycles when count > unique images */
+function pickImages(count: number, seed: number): PexelsImage[] {
+  const result: PexelsImage[] = [];
+  let round = 0;
 
-  return { parallax, gallery: [...remainder, ...extras] };
+  while (result.length < count) {
+    const batch = shuffleImages(PEXELS_IMAGES, seed + round * 97);
+    result.push(...batch);
+    round++;
+  }
+
+  return result.slice(0, count);
 }
 
-const { parallax, gallery } = assignSectionImages(3, 6, 37982071);
-
-export const PARALLAX_IMAGES = parallax;
-export const GALLERY_IMAGES = gallery;
+export const PARALLAX_IMAGES = pickImages(3, 37982071);
+export const GALLERY_IMAGES = pickImages(6, 37982071 + 500);
