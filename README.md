@@ -2,13 +2,11 @@
 
 Premium cinematic landing page built with Next.js, GSAP, Three.js, and Lenis smooth scroll.
 
-**Live site:** [https://githioval.github.io/site01/](https://githioval.github.io/site01/)
-
 **Repository:** [https://github.com/githioval/site01](https://github.com/githioval/site01)
 
 ## Stack
 
-- **Next.js 15** (App Router, static export)
+- **Next.js 15** (App Router)
 - **Tailwind CSS**
 - **GSAP** + ScrollTrigger
 - **Three.js** (hero starfield)
@@ -27,32 +25,20 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
 npm run build
+npm start
 ```
 
-Static files are output to the `out/` directory.
+## Deploy to Vercel
 
-## Deploy to GitHub Pages
+1. Push this repo to GitHub
+2. Go to [vercel.com/new](https://vercel.com/new) and import `githioval/site01`
+3. Vercel auto-detects Next.js — click **Deploy**
 
-### 1. Create a GitHub repository
+Or via CLI:
 
-Push this project to a new repo on GitHub.
-
-### 2. Enable GitHub Pages
-
-In your repo: **Settings → Pages → Build and deployment → Source → GitHub Actions**.
-
-### 3. Push to `main`
-
-The included workflow (`.github/workflows/deploy.yml`) builds and deploys automatically on every push to `main`.
-
-### Base path notes
-
-| Repo type | URL example | Config needed |
-|---|---|---|
-| Project site | `username.github.io/nara` | Set `NEXT_PUBLIC_BASE_PATH=/nara` in the workflow (already uses repo name) |
-| User site | `username.github.io` | Use a repo named `username.github.io` — base path stays empty |
-
-To deploy as a user site, edit `.github/workflows/deploy.yml` and remove or empty the `NEXT_PUBLIC_BASE_PATH` env var.
+```bash
+npx vercel --prod
+```
 
 ## Fonts
 
@@ -65,4 +51,4 @@ To deploy as a user site, edit `.github/workflows/deploy.yml` and remove or empt
 
 ## License
 
-Private — © Nara. All rights reserved.
+© Nara. All rights reserved.
