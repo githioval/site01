@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global resets for cinematic full-viewport layout ── */
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+body {
+  background-color: transparent;
+  color: #ededed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.cursor-none,
+body.cursor-none * {
+  cursor: none !important;
+}
+
+/* ── Atmospheric background ── */
+.background-effects {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Drifting gradient orbs */
+.bg-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(150px);
+  will-change: transform;
+}
+
+.bg-orb-green {
+  top: -10%;
+  left: -8%;
+  background: radial-gradient(circle, #064e3b 0%, transparent 70%);
+}
+
+.bg-orb-purple {
+  right: -10%;
+  bottom: -12%;
+  background: radial-gradient(circle, #581c87 0%, transparent 70%);
+}
+
+.bg-orb-blue {
+  top: 50%;
+  left: 50%;
+  background: radial-gradient(circle, #1e3a8a 0%, transparent 70%);
+}
+
+/* Mouse-following spotlight */
+.mouse-spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(0, 255, 136, 0.06),
+    transparent 40%
+  );
+  opacity: 0.05;
+  transition: opacity 0.3s ease;
+}
+
+/* Noise texture overlay */
+.bg-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+}
+
+/* Hide scrollbar while keeping scroll functionality */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "site01",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "framer-motion": "^13.1.0",
+    "geist": "^1.7.2",
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.26",
+    "next": "^15.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.185.4",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.3.0",
+    "postcss": "^8.5.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0"
+  }
+}
