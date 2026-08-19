@@ -4,47 +4,31 @@ export type PexelsImage = {
   creditUrl: string;
 };
 
-/** All Pexels assets — local copies in /public/images */
+/** Bright Pexels assets — local copies in /public/images */
 export const PEXELS_IMAGES: PexelsImage[] = [
   {
-    src: "/images/abstract-art.jpg",
-    alt: "A 3D rendering of abstract art",
-    creditUrl: "https://www.pexels.com/photo/a-3d-rendering-of-an-abstract-art-13026928/",
+    src: "/images/dome-geometric.jpg",
+    alt: "Intricate architectural dome with geometric patterns",
+    creditUrl:
+      "https://www.pexels.com/photo/intricate-architectural-dome-with-geometric-patterns-37982071/",
   },
   {
-    src: "/images/geometry-orange.jpg",
-    alt: "Geometry room in orange light",
-    creditUrl: "https://www.pexels.com/photo/geometry-room-in-orange-light-12627678/",
+    src: "/images/beam-ceiling.jpg",
+    alt: "Beam under ceiling in black and white",
+    creditUrl:
+      "https://www.pexels.com/photo/beam-under-ceiling-in-black-and-white-19176619/",
   },
   {
-    src: "/images/golden-pipes.jpg",
-    alt: "Golden pipes in a room",
-    creditUrl: "https://www.pexels.com/photo/golden-pipes-in-a-room-12623749/",
+    src: "/images/orange-sculpture.jpg",
+    alt: "Abstract orange sculptural form on gradient background",
+    creditUrl:
+      "https://www.pexels.com/photo/abstract-orange-sculptural-form-on-gradient-background-36025195/",
   },
   {
-    src: "/images/red-purple-pyramid.jpg",
-    alt: "Vivid abstract red and purple pyramid render",
-    creditUrl: "https://www.pexels.com/photo/vivid-abstract-red-and-purple-pyramid-render-29751269/",
-  },
-  {
-    src: "/images/red-geometric.jpg",
-    alt: "Red light on transparent geometric shape in dark",
-    creditUrl: "https://www.pexels.com/photo/red-light-on-transparent-geometric-shape-in-dark-16264087/",
-  },
-  {
-    src: "/images/colorful-geometric.jpg",
-    alt: "Colorful abstract geometric art with gradient",
-    creditUrl: "https://www.pexels.com/photo/colorful-abstract-geometric-art-with-gradient-28551568/",
-  },
-  {
-    src: "/images/abstract-modern.jpg",
-    alt: "Abstract art modern render",
-    creditUrl: "https://www.pexels.com/photo/abstract-art-modern-render-12627677/",
-  },
-  {
-    src: "/images/golden-construction.jpg",
-    alt: "Golden construction in a building",
-    creditUrl: "https://www.pexels.com/photo/golden-construction-in-a-building-12623752/",
+    src: "/images/green-fluid.jpg",
+    alt: "Abstract green fluid shape on mint background",
+    creditUrl:
+      "https://www.pexels.com/photo/abstract-green-fluid-shape-on-mint-background-36025194/",
   },
 ];
 
@@ -77,7 +61,7 @@ function assignSectionImages(
   return { parallax, gallery: [...remainder, ...extras] };
 }
 
-const { parallax, gallery } = assignSectionImages(3, 6, 13026928);
+const { parallax, gallery } = assignSectionImages(3, 6, 37982071);
 
 export const PARALLAX_IMAGES = parallax;
 export const GALLERY_IMAGES = gallery;
