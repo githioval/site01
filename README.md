@@ -4,6 +4,8 @@ Premium cinematic landing page built with Next.js, GSAP, Three.js, and Lenis smo
 
 **Repository:** [https://github.com/githioval/site01](https://github.com/githioval/site01)
 
+**Live site:** [https://site01-roan.vercel.app](https://site01-roan.vercel.app)
+
 ## Stack
 
 - **Next.js 15** (App Router)
